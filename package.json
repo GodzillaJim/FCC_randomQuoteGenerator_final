@@ -9,7 +9,7 @@
     "@asteffey/react-fcc-test": "1.0.6",
     "babel-core": "6.26.3",
     "gh-pages": "2.1.1",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "react": "16.8.6",
     "react-bootstrap": "1.0.0-beta.14",
     "react-dom": "16.8.6",
