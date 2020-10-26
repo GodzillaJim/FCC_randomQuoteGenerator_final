@@ -10,18 +10,18 @@
 .next{
   display:block;
   float:left;
-  background-color:blue;
   border:white solid 1px;
   padding:5px;
-  border-radius:25px;
+  border-radius:8px;
   font-size:16px;
   width:auto;
-  color:white;
+  color:black;
   font-family:Roboto;
   margin-top:25px;
   padding-right:15px;
   padding-left:15px;
   box-shadow: 10px 10px 10px -6px rgba(0,0,0,0.57);
+  font-family: sans-serif
 }
 .blockquote-footer{
 
@@ -32,4 +32,8 @@
 }
 .translate{
   transform:translate(-5px,5px);
+}
+#text{
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }

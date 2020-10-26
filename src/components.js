@@ -1,36 +1,34 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
+import {Button, Card, Container, Row} from "react-bootstrap"
 import $ from "jquery";
 
 let dataCollection = [
   {
     message:"Happy are those that live in the moment for there is no tomorrow",
     author:"Collin KIpchir",
-    bodyBg:"red"
+    bodyBg:"coral"
     
   },
   {
     message:
       "Do you know what happend to a toad when it is struck by lighting? The same thing that happens to everything else.",
     author: "Storm",
-    bodyBg:"green"
+    bodyBg:"lightgreen"
   },
   {
     message: "I'm the guy who does his job. You must be the other guy.",
     author: "Sgt. Sean Dignam",
-    bodyBg:"blue"
+    bodyBg:"aquamarine"
   },
   {
     message: "With great power comes great responsibility.",
     author: "Peter Parker",
-    bodyBg:"black"
+    bodyBg:"gold"
   },
   {
     message: "If you're nothing without the suite, then you shouldn't have it",
     author: "Tony Stark",
-    bodyBg:"purple"
+    bodyBg:"tomato"
   },
   {
     message:
@@ -48,7 +46,7 @@ let dataCollection = [
     message:
       "When you play the game of thrones, you win or you die. There is no middle ground",
     author: "Cersei Lannister",
-    bodyBg:"darkgrey"
+    bodyBg:"#ed959e"
   },
   {
     message:
@@ -60,7 +58,7 @@ let dataCollection = [
     message:
       "When you cut a man's tongue , you are not proving him a liar, you are only telling the world that you are afraid to hear what he might say",
     author: "Tyrion Lannister",
-    bodyBg:"navy"
+    bodyBg:"#a3f0a3"
   },
   {
     message:
@@ -72,7 +70,7 @@ let dataCollection = [
     message:
       "A reader lives a thousand lives before he dies, the man who doesn't lives only one",
     author: "Jojen Reed",
-    bodyBg:"indigo"
+    bodyBg:"#8e9fd1"
   },
   {
     message:
@@ -105,7 +103,7 @@ let data = {
   boxBgColor: "white",
   messageFontColor: "black",
   authorFontColor: "white",
-  authroBgColor: "blue",
+  authroBgColor: "navyblue",
   message:
     "Life is what happens when you're planning the match was fair but the best team lost",
   author: "TheBigDog",
@@ -130,8 +128,9 @@ class Box extends React.Component {
     });
   }
   updateContent() {
+    document.title = this.state.data.author;
     if(this.state.count >= this.state.infor.length-2){
-      this.setState({
+      return this.setState({
         count:0
       });
     }
@@ -139,7 +138,6 @@ class Box extends React.Component {
       data:this.state.infor[this.state.count],
       count:this.state.count+1
     });
-
   }
   render() {
     let styleBox = {
@@ -148,7 +146,7 @@ class Box extends React.Component {
       padding: "15px",
       alignSelf: "center",
       borderRadius: "25px",
-      marginTop: "5%"
+      marginTop: "12.5%"
     };
     return (
       <Container 
@@ -167,10 +165,10 @@ class Box extends React.Component {
                 <span className="author" id="author">{this.state.data.author}</span>
               </Row>
               <Row>
-                <button onClick={this.updateContent} className="next" id="new-quote">
+                <Button onClick={this.updateContent} className="next" variant="primary" id="new-quote">
                   Next Quote
-                </button>
-                <a className="share" href="twitter.com/intent/tweet" id="tweet-quote">
+                </Button>
+                <a className="share link twitter-share-button" href={`twitter.com/intent/tweet?text=${this.state.data.message}`} id="tweet-quote">
                   <img
                     src="https://image.flaticon.com/icons/png/512/23/23931.png"
                     width="20px"
