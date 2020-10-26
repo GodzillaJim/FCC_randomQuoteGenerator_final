@@ -168,7 +168,7 @@ class Box extends React.Component {
                 <Button onClick={this.updateContent} className="next" variant="primary" id="new-quote">
                   Next Quote
                 </Button>
-                <a className="share link twitter-share-button" href={`twitter.com/intent/tweet?text=${this.state.data.message}`} id="tweet-quote">
+                <a className="share link twitter-share-button" href={`https://www.twitter.com/intent/tweet?text=${this.state.data.message}`} id="tweet-quote">
                   <img
                     src="https://image.flaticon.com/icons/png/512/23/23931.png"
                     width="20px"
